@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Nível de Herói</title>
+    <meta name="description" content="Classifique o nível de um herói com base em sua experiência (XP). Um projeto prático da DIO para aprendizado de programação.">
+    <meta property="og:title" content="Classificador de Nível de Herói">
+    <meta property="og:description" content="Insira o nome e XP de um herói em um formulário e veja seu nível, de Ferro a Radiante!">
+    <meta property="og:image" content="https://cdn.example.com/hero-classifier-og.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Classificador de Nível de Herói</h1>
+        <form id="hero-form" onsubmit="heroName = this.elements['hero-name'].value.trim(); heroXpInput = this.elements['hero-xp'].value; heroXp = parseInt(heroXpInput);">
+            <div class="form-container">
+                <label for="hero-name">Nome do Herói</label>
+                <input type="text" id="hero-name" name="hero-name" placeholder="Digite o nome do herói" required>
+                <label for="hero-xp">Experiência (XP)</label>
+                <input type="number" id="hero-xp" name="hero-xp" placeholder="Digite a quantidade de XP" min="0" required>
+                <button type="submit">Classificar</button>
+            </div>
+        </form>
+        <p id="result" class="result"><script src="script.js"></script></p>
+    </div>
+</body>
+</html>
